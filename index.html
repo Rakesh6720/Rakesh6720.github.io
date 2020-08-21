@@ -8,6 +8,17 @@
 
 </head>
 <body>
-    
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="bee" src="./assets/bee/scene.gltf"></a-asset-item>
+          <a-asset-item id="tiger" src="./assets/tiger/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity 
+            gltf-model="#bee"
+            scale="0.05 0.05 0.05"
+            position="0 0 0">
+        </a-entity>
+    </a-scene>
 </body>
 </html>
