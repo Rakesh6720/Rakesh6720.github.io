@@ -23,7 +23,7 @@
             animation-mixer="loop: pingpong;"
             gps-entity-place="latitude: 43.06; longitude: -88.1;">
         </a-entity>
-        <!-- <a-camera gps-camera rotation-reader> </a-camera> -->
+        <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
 </body>
 <script type="text/javascript">
@@ -42,15 +42,15 @@
     //     bee.setAttribute("gps-entity-place", "longitude: " + long);
     // }, 2000);
 
-    function onSceneLoaded(){
-        let bee = document.querySelector('#deez');
-        bee.setAttribute("gps-entity-place", "latitude: " + lat);
-        bee.setAttribute("gps-entity-place", "longitude: " + long);
-        console.log('scene loaded');
-    }
+    // function onSceneLoaded(){
+    //     let bee = document.querySelector('#deez');
+    //     bee.setAttribute("gps-entity-place", "latitude: " + lat);
+    //     bee.setAttribute("gps-entity-place", "longitude: " + long);
+    //     console.log('scene loaded');
+    // }
 
-    const scene = document.querySelector('a-scene');
-    scene.addEventListener('loaded', onSceneLoaded);
+    // const scene = document.querySelector('a-scene');
+    // scene.addEventListener('loaded', onSceneLoaded);
     
 </script>
 </html>
