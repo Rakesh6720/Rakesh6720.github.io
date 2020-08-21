@@ -26,8 +26,9 @@
     </a-scene>
 </body>
 <script>
-    const lat = null;
-    const long = null;
+    let lat;
+    let long;
+
     navigator.geolocation.getCurrentPosition((position) => {
         console.log(position.coords.latitude);
         lat = position.coords.latitude;
@@ -35,7 +36,7 @@
         long = position.coords.longitude;
     });
 
-    const bee = document.querySelector("#3Dbee");
+    let bee = document.querySelector('#3Dbee');
     bee.setAttribute("gps-entity-place", "latitude: " + lat);
     bee.setAttribute("gps-entity-place", "longitude: " + long);
 </script>
