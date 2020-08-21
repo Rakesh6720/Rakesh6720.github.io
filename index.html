@@ -26,7 +26,7 @@
         <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
 </body>
-<script>
+<script type="text/javascript">
     let lat;
     let long;
 
@@ -36,12 +36,20 @@
         console.log(position.coords.longitude);        
         long = position.coords.longitude;
     });
-    setTimeout(() => {
+    // setTimeout(() => {
+    //     let bee = document.querySelector('#deez');
+    //     bee.setAttribute("gps-entity-place", "latitude: " + lat);
+    //     bee.setAttribute("gps-entity-place", "longitude: " + long);
+    // }, 2000);
+
+    function onSceneLoaded(){
         let bee = document.querySelector('#deez');
         bee.setAttribute("gps-entity-place", "latitude: " + lat);
         bee.setAttribute("gps-entity-place", "longitude: " + long);
-    }, 2000);
+    }
 
+    const scene = document.querySelector('a-scene');
+    scene.addEventListener('loaded', onSceneLoaded);
     
 </script>
 </html>
