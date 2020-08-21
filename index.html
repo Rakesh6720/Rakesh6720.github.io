@@ -34,7 +34,6 @@
         lat = position.coords.latitude;
         console.log(position.coords.longitude);        
         long = position.coords.longitude;
-    }).then(()=> {
         let bee = document.querySelector('#3Dbee');
         bee.setAttribute("gps-entity-place", "latitude: " + lat);
         bee.setAttribute("gps-entity-place", "longitude: " + long);
