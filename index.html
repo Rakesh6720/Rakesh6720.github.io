@@ -9,18 +9,14 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 </head>
 <body>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-
+    <a-scene>
         <a-assets>
           <a-asset-item id="bee" src="./assets/bee/scene.gltf"></a-asset-item>
           <a-asset-item id="tiger" src="./assets/tiger/scene.gltf"></a-asset-item>
         </a-assets>
-        <a-camera gps-camera rotation-reader></a-camera>
+
         <a-entity 
-            id="deez"
+            id="bee_model"
             gltf-model="#bee"
             scale="0.5 0.5 0.5"
             position="2 3 -1"
@@ -30,6 +26,7 @@
         
     </a-scene>
 </body>
+
 <script type="text/javascript">
     let lat;
     let long;
@@ -47,7 +44,7 @@
     // }, 2000);
 
     function onSceneLoaded(){
-        let bee = document.querySelector('#deez');
+        let bee = document.querySelector('#bee_model');
         bee.setAttribute('gps-entity-place', `latitude: ${lat};`);
         bee.setAttribute('gps-entity-place', `longitude: ${long};`);
         console.log('scene loaded');
