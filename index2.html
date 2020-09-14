@@ -20,7 +20,7 @@
         </a-assets>
 
         <a-entity 
-            id="bee"
+            id="bee_model"
             gltf-model="#bee"
             scale="10 10 10"
             animation-mixer="loop: pingpong;"
@@ -48,9 +48,9 @@
     // }, 2000);
 
     function onSceneLoaded(){
-        let bee = document.querySelector('#bee_model');
-        bee.setAttribute('gps-entity-place', `latitude: ${lat};`);
-        bee.setAttribute('gps-entity-place', `longitude: ${long};`);
+        let bee = document.querySelector("#bee_model");
+        // bee.setAttribute('gps-entity-place', `latitude: ${lat};`);
+        // bee.setAttribute('gps-entity-place', `longitude: ${long};`);
         console.log('scene loaded');
     }
 
